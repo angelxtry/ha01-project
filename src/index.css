@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.main-container {
+  margin-top: 100px;
+  text-decoration: none;
+  height: 400px;
+}
+
+.col-center {
+  background: #E9E8EB;
+}
+
+.btn-header-home {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.home-title {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.div-btn-main-container {
+  text-align: center;
+}
+
+.btn-main-container {
+  margin: 30px;
+  width: 70px;
+  text-align: center;
+}
+
+.user-list-title {
+  text-align: center;
+  color: #038DFF;
+  border: 1px solid grey;
+  margin-bottom: -2px;
+}
+
+.user-list-item {
+  text-align: center;
+  border: 1px solid grey;
+}
+
+.img-user-profile {
+  margin-bottom: 20px;
+}
+
+#bootstrap-override .table th,
+#bootstrap-override .table td {
+  border: 0px solid;
+}
+
+#bootstrap-override .table {
+  border: 1px solid gray;
+}
+
+.link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.link {
+  color: white;
+}
