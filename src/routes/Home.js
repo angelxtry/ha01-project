@@ -18,7 +18,7 @@ const Home = () => {
                   투두
                 </Button>
               </Link>
-              <Link className="link link-main-container" to="/board">
+              <Link className="link link-main-container" to="/boards">
                 <Button className="btn-main-container" color="success">
                   게시판
                 </Button>

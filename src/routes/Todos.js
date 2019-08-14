@@ -25,19 +25,9 @@ class Todos extends Component {
   };
 
   callbackFilteredData = choice => {
-    const filtered = choice => {
-      switch (choice) {
-        case selection.COMPLETED:
-          return this.state.todos.filter(todo => todo.completed === true);
-        case selection.NOT_COMPLETE:
-          return this.state.todos.filter(todo => todo.completed === false);
-        default:
-          return [];
-      }
-    };
     this.setState({
       ...this.state,
-      filtered: filtered(choice)
+      filtered: filterData(this.state.todos, choice)
     });
   };
 
@@ -61,13 +51,13 @@ class Todos extends Component {
                     <ListGroupItem>
                       <div key={todo.id}>
                         <div
+                          className="div-todo-title"
                           style={{
                             fontWeight: todo.completed ? "bold" : "none"
                           }}
                         >
                           {todo.title}
                         </div>
-                        {/* <div>completed: {`${todo.completed}`}</div> */}
                       </div>
                     </ListGroupItem>
                   );
@@ -81,5 +71,16 @@ class Todos extends Component {
     );
   }
 }
+
+export const filterData = (todos, choice) => {
+  switch (choice) {
+    case selection.COMPLETED:
+      return todos.filter(todo => todo.completed === true);
+    case selection.NOT_COMPLETE:
+      return todos.filter(todo => todo.completed === false);
+    default:
+      return [];
+  }
+};
 
 export default Todos;

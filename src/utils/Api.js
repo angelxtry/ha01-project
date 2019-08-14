@@ -19,9 +19,10 @@ export const getTodosByUserId = (id, callback) => {
     .catch(error => console.warn(error));
 };
 
-export const getUserImage = (id, callback) => {
-  fetch(`https://randomuser.me/api/portraits/men/${id}.jpg`, { method: "GET" })
+export const getPosts = (callback) => {
+  fetch(`https://koreanjson.com/posts`, { method: "GET" })
     .then(response => response.json())
     .then(json => callback(json))
     .catch(error => console.warn(error));
 };
+
